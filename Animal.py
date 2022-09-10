@@ -1,8 +1,11 @@
 class Animal:
     
-    def __init__(self,age):
-        self.age = age
-        self.name =None
+    num=0
+
+    def __init__(self,age1,name1):
+        self.age = age1
+        self.name =name1
+        Animal.num+=1
     
     def set_name(self,name):
         self.name = name
@@ -16,3 +19,8 @@ class Animal:
     def set_age(self):
         return self.age 
 
+    def print_num(self):
+        print('number of elements of class is'+Animal.num)    
+
+dog =Animal(15,"ahmed")
+print(dog.age,dog.name)
